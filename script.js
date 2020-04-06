@@ -1,3 +1,4 @@
+/* eslint-disable */
 const keyboardSpec = {
 //  "Key":          [ eng, engS, engC,  rus, rusS, rusC, widthKoef, altName],
     "Backquote":    [  96,  126,   96, 1105, 1025, 1025, 1, ''],
@@ -13,8 +14,8 @@ const keyboardSpec = {
     "Digit0":       [  48,   41,   48,   48,   41,   48, 1, ''],
     "Minus":        [  45,   95,   45,   45,   95,   45, 1, ''],
     "Equal":        [  61,   43,   61,   61,   43,   61, 1, ''],
-    "Backspace":    [0000, 0000, 0000, 0000, 0000, 0000, 2, 'Backspace'],
-    "Tab":          [0000, 0000, 0000, 0000, 0000, 0000, 1, 'Tab'],
+    "Backspace":    [   0,    0,    0,    0,    0,    0, 2, 'Backspace'],
+    "Tab":          [   0,    0,    0,    0,    0,    0, 1, 'Tab'],
     "KeyQ":         [ 113,   81,   81, 1081, 1049, 1049, 1, ''],
     "KeyW":         [ 119,   87,   87, 1094, 1062, 1062, 1, ''],
     "KeyE":         [ 101,   69,   69, 1091, 1059, 1059, 1, ''],
@@ -28,8 +29,8 @@ const keyboardSpec = {
     "BracketLeft":  [  91,  123,   91, 1093, 1061, 1061, 1, ''],
     "BracketRight": [  93,  125,   93, 1098, 1066, 1066, 1, ''],
     "Backslash":    [  92,  124,   92,   92,   47,   92, 1, ''],
-    "Delete":       [0000, 0000, 0000, 0000, 0000, 0000, 1, 'Del'],
-    "CapsLock":     [0000, 0000, 0000, 0000, 0000, 0000, 2, 'CapsLock'],
+    "Delete":       [   0,    0,    0,    0,    0,    0, 1, 'Del'],
+    "CapsLock":     [   0,    0,    0,    0,    0,    0, 2, 'CapsLock'],
     "KeyA":         [  97,   65,   65, 1092, 1060, 1060, 1, ''],
     "KeyS":         [ 115,   83,   83, 1099, 1067, 1067, 1, ''],
     "KeyD":         [ 100,   68,   68, 1074, 1042, 1042, 1, ''],
@@ -41,8 +42,8 @@ const keyboardSpec = {
     "KeyL":         [ 108,   76,   76, 1076, 1044, 1044, 1, ''],
     "Semicolon":    [  59,   58,   59, 1078, 1046, 1046, 1, ''],
     "Quote":        [  39,   34,   39, 1101, 1069, 1069, 1, ''],
-    "Enter":        [  13,   13,   13,   13,   13,   13, 2, 'Enter'],
-    "ShiftLeft":    [0000, 0000, 0000, 0000, 0000, 0000, 3, 'Shift'],
+    "Enter":        [   0,    0,    0,    0,    0,    0, 2, 'Enter'],
+    "ShiftLeft":    [   0,    0,    0,    0,    0,    0, 3, 'Shift'],
     "KeyZ":         [ 122,   90,   90, 1103, 1071, 1071, 1, ''],
     "KeyX":         [ 120,   88,   88, 1095, 1063, 1063, 1, ''],
     "KeyC":         [  99,   67,   67, 1089, 1057, 1057, 1, ''],
@@ -53,21 +54,22 @@ const keyboardSpec = {
     "Comma":        [  44,   60,   44, 1073, 1041, 1041, 1, ''],
     "Period":       [  46,   62,   46, 1102, 1070, 1070, 1, ''],
     "Slash":        [  47,   63,   47,   46,   44,   46, 1, ''],
-    "ArrowUp":      [0000, 0000, 0000, 0000, 0000, 0000, 1, '▲'],
-    "ShiftRight":   [0000, 0000, 0000, 0000, 0000, 0000, 1, 'Shift'],
-    "ControlLeft":  [0000, 0000, 0000, 0000, 0000, 0000, 3, 'Ctrl'],
-    "MetaLeft":     [0000, 0000, 0000, 0000, 0000, 0000, 1, 'Win'],
-    "AltLeft":      [0000, 0000, 0000, 0000, 0000, 0000, 1, 'Alt'],
-    "Space":        [  32,   32,   32,   32,   32,   32, 5, 'Space'],
-    "AltRight":     [0000, 0000, 0000, 0000, 0000, 0000, 1, 'Alt'],
-    "ControlRight": [0000, 0000, 0000, 0000, 0000, 0000, 1, 'Ctrl'],
-    "ArrowLeft":    [0000, 0000, 0000, 0000, 0000, 0000, 1, '◄'],
-    "ArrowDown":    [0000, 0000, 0000, 0000, 0000, 0000, 1, '▼'],
-    "ArrowRight":   [0000, 0000, 0000, 0000, 0000, 0000, 1, '►']
+    "ArrowUp":      [   0,    0,    0,    0,    0,    0, 1, '▲'],
+    "ShiftRight":   [   0,    0,    0,    0,    0,    0, 1, 'Shift'],
+    "ControlLeft":  [   0,    0,    0,    0,    0,    0, 3, 'Ctrl'],
+    "MetaLeft":     [   0,    0,    0,    0,    0,    0, 1, 'Win'],
+    "AltLeft":      [   0,    0,    0,    0,    0,    0, 1, 'Alt'],
+    "Space":        [  32,   32,   32,   32,   32,   32, 5, ''],
+    "AltRight":     [   0,    0,    0,    0,    0,    0, 1, 'Alt'],
+    "ControlRight": [   0,    0,    0,    0,    0,    0, 1, 'Ctrl'],
+    "ArrowLeft":    [   0,    0,    0,    0,    0,    0, 1, '◄'],
+    "ArrowDown":    [   0,    0,    0,    0,    0,    0, 1, '▼'],
+    "ArrowRight":   [   0,    0,    0,    0,    0,    0, 1, '►']
 }
 
 const textarea = document.createElement('textarea');
 textarea.className = 'textarea';
+// textarea.setAttribute('readonly', true);
 document.body.append(textarea);
 const keyboard = document.createElement('div');
 keyboard.className = 'keyboard';
@@ -78,12 +80,13 @@ hint.innerHTML = 'Change language: Alt + Shift';
 document.body.append(hint);
 for (const key in keyboardSpec) {
     if (keyboardSpec.hasOwnProperty(key)) {
-        const element = keyboardSpec[key];
-        const button = document.createElement('button');
-        const charCode = element[3];
-        const widthKoef = element[6];
-        const altName = element[7];        
-        button.className = 'button';        
+        const value = keyboardSpec[key];                
+        const charCode = value[0];
+        const widthKoef = value[6];
+        const altName = value[7];       
+        const button = document.createElement('button'); 
+        button.className = 'button';
+        button.id = key;       
         button.innerHTML = altName ? altName : String.fromCharCode(charCode);
         button.style.height = 'calc((100% - 50px) / 5)';      
         button.style.width = 'calc((100% - 150px) / 15 * ' + widthKoef + ' + (' + widthKoef + ' - 1) * 10px)';  
@@ -91,7 +94,72 @@ for (const key in keyboardSpec) {
     }
 }
 
+let key = '';
+let isShift = false;
+let isCapsLock = false;
+let buttons = document.querySelectorAll('.button'); 
+let prevKey = '';
+let lang = 0; /* 0 - eng, 3 - rus */
+
 document.onkeydown = function (event) {
-    console.clear();
-    console.log(event.charCode + ' ' + event.char + ' ' + event.code);
+    event.preventDefault();
+    activeKey(event.code);
+}
+
+document.onclick = function (event) {
+    if (event.target.tagName == 'BUTTON') {
+        activeKey(event.target.id);
+    }
+}
+
+function activeKey(key) {
+    if (((key != 'ShiftLeft') || (key != 'ShiftRight')) && ((prevKey == 'AltLeft') || (prevKey == 'AltRight'))) {
+        document.querySelector('#' + prevKey).classList.remove('button--active');
+    }   
+
+    if (keyboardSpec.hasOwnProperty(key) && key != 'CapsLock' && 
+    key != 'ShiftLeft' && key != 'ShiftRight' && key != 'AltLeft' && key != 'AltRight') {
+        const button = document.querySelector('#' + key); 
+        button.classList.toggle('button--active');
+        setTimeout(() => {
+            button.classList.toggle('button--active');
+        }, 100);
+        if (keyboardSpec[key][7] == '') {
+            textarea.value += button.innerHTML;
+        }
+    }    
+
+    if (keyboardSpec.hasOwnProperty(key) && (key == 'CapsLock' || 
+    key == 'ShiftLeft' || key == 'ShiftRight' || key == 'AltLeft' || key == 'AltRight')) {
+        const button = document.querySelector('#' + key); 
+        button.classList.toggle('button--active');   
+        if (((key == 'ShiftLeft') || (key == 'ShiftRight')) && ((prevKey == 'AltLeft') || (prevKey == 'AltRight')))  {
+            lang = lang ? 0 : 3;    
+            document.querySelector('#' + prevKey).classList.remove('button--active');    
+            setTimeout(() => {
+                button.classList.toggle('button--active');
+            }, 100);    
+            isShift = !isShift;
+        }               
+        if (key == 'CapsLock') {
+            isCapsLock = !isCapsLock;
+        }
+        if ((key == 'ShiftLeft') || (key == 'ShiftRight')) {
+            isShift = !isShift;
+        }   
+    
+        buttons.forEach(button => {
+            const value = keyboardSpec[button.id];                
+            let charCode = value[0 + lang];
+            if (isCapsLock) {
+                charCode = value[2 + lang];
+            }
+            if (isShift) {
+                charCode = value[1 + lang];
+            }        
+            const altName = value[7];         
+            button.innerHTML = altName ? altName : String.fromCharCode(charCode);
+        });        
+    }       
+    prevKey = key;
 }

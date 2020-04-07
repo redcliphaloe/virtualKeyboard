@@ -78,10 +78,18 @@ const hint = document.createElement('p');
 hint.className = 'hint';
 hint.innerHTML = 'Change language: Alt + Shift';
 document.body.append(hint);
+
+let key = '';
+let isShift = false;
+let isCapsLock = false;
+let prevKey = '';
+let lang = +localStorage.getItem('lang'); /* 0 - eng, 3 - rus */  
+// let lang = 0; /* 0 - eng, 3 - rus */  
+
 for (const key in keyboardSpec) {
     if (keyboardSpec.hasOwnProperty(key)) {
         const value = keyboardSpec[key];                
-        const charCode = value[0];
+        const charCode = value[0 + lang];
         const widthKoef = value[6];
         const altName = value[7];       
         const button = document.createElement('button'); 
@@ -94,12 +102,7 @@ for (const key in keyboardSpec) {
     }
 }
 
-let key = '';
-let isShift = false;
-let isCapsLock = false;
 let buttons = document.querySelectorAll('.button'); 
-let prevKey = '';
-let lang = 0; /* 0 - eng, 3 - rus */
 
 document.onkeydown = function (event) {
     event.preventDefault();
@@ -116,7 +119,6 @@ function activeKey(key) {
     if (((key != 'ShiftLeft') || (key != 'ShiftRight')) && ((prevKey == 'AltLeft') || (prevKey == 'AltRight'))) {
         document.querySelector('#' + prevKey).classList.remove('button--active');
     }   
-console.log(key);
     if (keyboardSpec.hasOwnProperty(key) && key != 'CapsLock' && 
     key != 'ShiftLeft' && key != 'ShiftRight' && key != 'AltLeft' && key != 'AltRight') {
         const button = document.querySelector('#' + key); 
@@ -145,14 +147,17 @@ console.log(key);
             textarea.value += '▲';
         }        
         if (key == 'ArrowLeft') {
-            textarea.value += '◄';
+            // textarea.value += '◄';
+            textarea.selectionEnd = --textarea.selectionStart;
         }            
         if (key == 'ArrowDown') {
             textarea.value += '▼';
         }        
         if (key == 'ArrowRight') {
-            textarea.value += '►';
-        }              
+            // textarea.value += '►';
+            textarea.selectionEnd = ++textarea.selectionStart;
+        }    
+        textarea.focus();       
     }    
 
     if (keyboardSpec.hasOwnProperty(key) && (key == 'CapsLock' || 
@@ -161,6 +166,8 @@ console.log(key);
         button.classList.toggle('button--active');   
         if (((key == 'ShiftLeft') || (key == 'ShiftRight')) && ((prevKey == 'AltLeft') || (prevKey == 'AltRight')))  {
             lang = lang ? 0 : 3;    
+            localStorage.removeItem('lang');
+            localStorage.setItem('lang', lang);
             document.querySelector('#' + prevKey).classList.remove('button--active');    
             setTimeout(() => {
                 button.classList.toggle('button--active');

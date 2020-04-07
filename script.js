@@ -116,7 +116,7 @@ function activeKey(key) {
     if (((key != 'ShiftLeft') || (key != 'ShiftRight')) && ((prevKey == 'AltLeft') || (prevKey == 'AltRight'))) {
         document.querySelector('#' + prevKey).classList.remove('button--active');
     }   
-
+console.log(key);
     if (keyboardSpec.hasOwnProperty(key) && key != 'CapsLock' && 
     key != 'ShiftLeft' && key != 'ShiftRight' && key != 'AltLeft' && key != 'AltRight') {
         const button = document.querySelector('#' + key); 
@@ -127,6 +127,30 @@ function activeKey(key) {
         if (keyboardSpec[key][7] == '') {
             textarea.value += button.innerHTML;
         }
+        if (key == 'Backspace') {
+            textarea.setRangeText('', textarea.selectionStart - 1, textarea.selectionEnd);
+        }        
+        if (key == 'Tab') {
+            textarea.value += '\t';
+        }            
+        if (key == 'Delete') {
+            textarea.setRangeText('', textarea.selectionStart, textarea.selectionEnd + 1);
+        }        
+        if (key == 'Enter') {
+            textarea.value += '\n';
+        }            
+        if (key == 'ArrowUp') {
+            textarea.value += '▲';
+        }        
+        if (key == 'ArrowLeft') {
+            textarea.value += '◄';
+        }            
+        if (key == 'ArrowDown') {
+            textarea.value += '▼';
+        }        
+        if (key == 'ArrowRight') {
+            textarea.value += '►';
+        }              
     }    
 
     if (keyboardSpec.hasOwnProperty(key) && (key == 'CapsLock' || 

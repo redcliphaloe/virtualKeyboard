@@ -125,7 +125,9 @@ console.log(key);
             button.classList.toggle('button--active');
         }, 100);
         if (keyboardSpec[key][7] == '') {
-            textarea.value += button.innerHTML;
+            // textarea.value += button.innerHTML;
+            textarea.setRangeText(button.innerHTML, textarea.selectionStart, textarea.selectionEnd);
+            textarea.selectionStart = textarea.selectionStart + 1;
         }
         if (key == 'Backspace') {
             textarea.setRangeText('', textarea.selectionStart - 1, textarea.selectionEnd);

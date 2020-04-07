@@ -135,13 +135,17 @@ function activeKey(key) {
             textarea.setRangeText('', textarea.selectionStart - 1, textarea.selectionEnd);
         }        
         if (key == 'Tab') {
-            textarea.value += '\t';
+            // textarea.value += '\t';
+            textarea.setRangeText('\t', textarea.selectionStart, textarea.selectionEnd);
+            textarea.selectionStart = textarea.selectionStart + 1;              
         }            
         if (key == 'Delete') {
             textarea.setRangeText('', textarea.selectionStart, textarea.selectionEnd + 1);
         }        
         if (key == 'Enter') {
-            textarea.value += '\n';
+            // textarea.value += '\n';
+            textarea.setRangeText('\n', textarea.selectionStart, textarea.selectionEnd);
+            textarea.selectionStart = textarea.selectionStart + 1;            
         }            
         if (key == 'ArrowUp') {
             textarea.value += '▲';

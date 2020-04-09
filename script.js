@@ -105,6 +105,13 @@ for (const key in keyboardSpec) {
 let buttons = document.querySelectorAll('.button'); 
 
 document.onkeydown = function (event) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    console.clear();
+    console.log(event.charCode + ' ' + event.char + ' ' + event.code);
+=======
+>>>>>>> fix: correct tab/enter
     event.preventDefault();
     activeKey(event.code);
 }
@@ -199,4 +206,8 @@ function activeKey(key) {
         });        
     }       
     prevKey = key;
+<<<<<<< HEAD
+=======
+>>>>>>> 0c235ff... fix: correct tab/enter
+>>>>>>> fix: correct tab/enter
 }
